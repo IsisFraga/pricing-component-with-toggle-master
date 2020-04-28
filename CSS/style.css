@@ -18,6 +18,7 @@ main {
     background-repeat: no-repeat;
     background-position: 190px -35px;
     background-color:hsl(240, 78%, 98%);
+    margin: auto;
     width: 375px;
     height: 1750px;
     display: flex;
@@ -27,7 +28,7 @@ main {
 .pricing {
     font-size: 15px;
     text-align: center;
-    margin: 35px auto;
+    margin: 60px auto 35px auto;
     color: hsl(234, 14%, 74%);
     font-weight: 700;
     padding: 10px 0;
@@ -55,6 +56,7 @@ main {
     padding-top: 5px;
 }
 
+
 .cards {
     width: 100%;
     align-items: center;
@@ -71,7 +73,7 @@ main {
 
 .basic, .professional, .master {
     border-radius: 10px;
-    padding: 30px 30px;
+    padding: 35px;
 }
 
 .basic, .master {
@@ -82,18 +84,27 @@ main {
 .professional {
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff;
+    margin: 30px 0;
 }
 
-.professional .price {
+.professional .anual {
     color: #fff;
 }
 
-.price {
+.professional .month {
+    color: #fff;
+}
+
+.anual, .month {
     font-size: 70px;
     font-weight: 700;
     color:hsl(232, 13%, 33%);
     display: inline-flex;
     padding: 25px 0;
+}
+
+.month {
+    display: none;
 }
 
 h4 {
@@ -145,15 +156,15 @@ h4 {
     display: inline-block;
     width: 53px;
     height: 30px;
-  }
+}
   
-  .switch input { 
+.switch input { 
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -163,9 +174,13 @@ h4 {
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider.round:hover {
+    background: rgba(105, 111, 221, 0.4);
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 22px;
@@ -176,30 +191,30 @@ h4 {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
 
-  .slider.round {
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked + .slider {
     background-color: hsl(237, 63%, 64%);
-  }
-  
-  input:focus + .slider {
+}
+
+input:focus + .slider {
     box-shadow: 0 0 1px hsl(237, 63%, 64%);
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
+}
+
 /* end of slider */
 
 /* footer */
