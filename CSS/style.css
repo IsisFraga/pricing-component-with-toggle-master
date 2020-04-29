@@ -19,8 +19,8 @@ main {
     background-position: 190px -35px;
     background-color:hsl(240, 78%, 98%);
     margin: auto;
-    width: 375px;
-    height: 1750px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -36,6 +36,7 @@ main {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
@@ -48,7 +49,7 @@ main {
 .types {
     display: flex;
     justify-content: space-between;
-    padding: 0 45px;
+    max-width: 360px;
 }
 
 
@@ -105,6 +106,7 @@ main {
 
 .month {
     display: none;
+    padding: 25px 22px;
 }
 
 h4 {
@@ -137,20 +139,36 @@ h4 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    transition: 0.4s;
 }
 
 .more:hover {
     cursor: pointer;
     box-shadow: 5px 5px 30px hsl(241, 80%, 73%);
+    background: #fff;
+    color:  hsl(237, 63%, 64%); 
+    border: 1px solid hsl(237, 63%, 64%);
+    transition: 0.4s;
 }
 
 .professional .more {
     color: hsl(237, 63%, 64%);
-    background-image: none;
-    background-color: #fff;
+    background: #fff;
+    transition: 0.4s;
+}
+
+.professional .more:hover {
+    color: #fff;
+    background: rgba(105, 111, 221, 0);
+    border: 1px solid #fff;
+    transition: 0.4s;
 }
 
 /* slider */
+.btn-slider {
+    margin: 0 25px;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -225,4 +243,50 @@ input:checked + .slider:before {
 
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width: 901px) {
+
+    main {
+        background-image: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+        background-position: top right, bottom left;
+        max-width: 1440px;
+        height: 850px;
+        align-items: center;
+        margin: auto;
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    .types {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+
+    .cards {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .basic, .professional, .master {
+        width: 360px;
+    }
+
+    .professional {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .basic, .master {
+        margin-bottom: 0;
+    }
 }
