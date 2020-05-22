@@ -1,4 +1,4 @@
-https://pricing-component-with-toggle-master-isis.netlify.app
+Give a try! Please access: https://pricing-component-with-toggle-master-isis.netlify.app
 
 
 # Frontend Mentor - File Transfer pricing component
